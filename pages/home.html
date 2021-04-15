@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/home.css">
+  <title>Teste MOVA</title>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="../assets/images/logo.svg" alt="">
+    </div>
+    <div class="header-right">
+      <a onclick="Navigation.goBack()"><img src="../assets/images/arrow.svg" alt="">Voltar</a>
+    </div>
+  </header>
+  <main class="screen-one">
+    <section class="filters">
+      <div class="filter-by">
+        <span>Filtrar por</span>
+        <select name="filter-one" id="filter-one" onchange="Select.chooseFilterOne(this.value)">
+          <option value="" selected disabled>Escolha uma opção</option>
+          <option value="region">Região</option>
+          <option value="capital">Capital</option>
+          <option value="lang">Língua</option>
+          <option value="name">País</option>
+          <option value="callingcode">Código de Ligação</option>
+        </select>
+      </div>
+      <div class="filter">
+        <span>Região</span>
+        <select name="filter-two" id="filter-two" onchange="Select.chooseFilterTwo(this.value)">
+          <option value="" selected disabled>Escolha uma opção</option>
+        </select>
+      </div>
+      <div class="filter-search">
+        <button onclick="Select.filterResults()">PESQUISAR</button>
+      </div>
+    </section>
+    <section class="results results--screen-one"></section>
+  </main>
+  <main class="screen-two">
+    <section class="country-information">
+      <div class="country-flag">
+        <img src="../assets/images/Bandeira Brasil.png" alt="">
+      </div>
+      <div class="country-informations">
+        <span id="country-name"></span>
+        <span id="country-capital"></span>
+        <span id="country-region"></span>
+        <span id="country-subregion"></span>
+        <span id="country-population"></span>
+        <span id="country-lang"></span>
+      </div>
+    </section>
+    <section class="results-title">
+      <span>Países Vizinhos:</span>
+    </section>
+    <section class="results results--screen-two">
+    </section>
+  </main>
+  <footer class="footer-one">
+    <div class="result-pagination">
+      <div class="result-pagination--left vector" onclick="Pagination.goPrev()">
+        <img src="../assets/images/vector-left.svg" alt="">
+      </div>
+      <div class="result-pagination--numbers">
+        <div class="result-pagination--number number1 selected" onclick="Pagination.goToSlide(0)">1</div>
+      </div>
+      <div class="result-pagination--right vector" onclick="Pagination.goNext()">
+        <img src="../assets/images/vector-right.svg" alt="">
+      </div>
+    </div>
+  </footer>
+  <footer class="footer-two">
+    <div class="result-pagination--two">
+      <div class="result-pagination--left-two vector" onclick="Pagination.goPrevNeighbors()">
+        <img src="../assets/images/vector-left.svg" alt="">
+      </div>
+      <div class="result-pagination--numbers-two">
+        <div class="result-pagination--number-two number1 selected" onclick="Pagination.goToSlide(0)">1</div>
+      </div>
+      <div class="result-pagination--right-two vector" onclick="Pagination.goNextNeighbors()">
+        <img src="../assets/images/vector-right.svg" alt="">
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/scripts/home.js"></script>
+  <script src="../assets/scripts/regions.js"></script>
+  <script src="../assets/scripts/lang.js"></script>
+</body>
+</html>

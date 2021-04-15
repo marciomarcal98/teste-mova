@@ -1,0 +1,401 @@
+/*====== Global ======*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --color-purple: #6d2080;
+}
+
+/*====== Header ======*/
+header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0px 4px 3px #bbb;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-right {
+  display: none;
+}
+
+.header-right a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--color-purple);
+
+  border: 1px solid var(--color-purple);
+  padding: 12px 16px;
+
+  cursor: pointer;
+}
+
+.header-right a img {
+  margin-right: 20px;
+}
+
+/*====== Main - Filters (Screen One) ======*/
+main {
+  height: calc(100vh - 200px);
+  max-width: 1140px;
+  margin: auto;
+  padding: 50px 0;
+  overflow: hidden;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* main.screen-one {
+  display: block;
+} */
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-by,
+.filter {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--color-purple);
+  font-size: 14px;
+
+  margin-right: 30px;
+  width: 100%;
+  max-width: 316px;
+
+}
+
+.filter-by select,
+.filter select {
+  border: none;
+  border-bottom: 1px solid #a8a8a8;
+  outline: none;
+
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.filter {
+  display: none;
+}
+
+.filter-search {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 30%;
+}
+
+.filter-search button {
+  width: 156px;
+  height: 36px;
+  padding: 10px 36px;
+
+  background-color: var(--color-purple);
+  border-radius: 10px;
+  border: 1px solid var(--color-purple);
+  outline: none;
+
+  color: #FFF;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+
+  cursor: pointer;
+}
+
+.filter-search button:hover {
+  background-color: #fff;
+  color: var(--color-purple);
+}
+
+/*====== Main - Results (Screen One) ======*/
+.results--screen-one {
+  margin-top: 50px;
+  display: flex;
+
+  transition: all ease 0.4s;
+}
+
+.results--screen-one .container-imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 30px;
+  justify-content: space-between;
+  width: 1140px;
+}
+
+.results--screen-one .result-img {
+  width: 100%;
+  height: 100%;;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results--screen-one .result-img img {
+  width: 240px;
+  height: 137.47px;
+
+  cursor: pointer;
+}
+
+/*====== Main - Information (Screen Two) ======*/
+main.screen-two {
+  display: none;
+}
+
+.country-information {
+  display: flex;
+}
+
+.country-flag {
+  width: 443px;
+  height: 258px;
+  margin-right: 20px;
+}
+
+.country-flag img {
+  width: 100%;
+  height: 100%;
+}
+
+.country-informations {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  height: 258px;
+  justify-content: space-between;
+}
+
+.results-title {
+  padding: 20px;
+  height: 50px;
+}
+
+/*====== Main - Results (Screen Two) ======*/
+.results--screen-two {
+  display: flex;
+
+  transition: all ease 0.4s;
+}
+
+.results--screen-two .container-imgs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 30px;
+  justify-content: space-between;
+  width: 1140px;
+}
+
+.results--screen-two .result-img {
+  width: 100%;
+  height: 100%;;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results--screen-two .result-img img {
+  width: 210px;
+  height: 120.28px;
+
+  cursor: pointer;
+}
+
+
+/*====== Footer (Screen One) ======*/
+footer.footer-one {
+  height: 100px;
+  width: auto;
+}
+
+.result-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.vector {
+  width: 28px;
+  height: 28px;
+  box-shadow: 2px 2px 2px #bbb;
+  border-radius: 2px;
+  margin: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.result-pagination--numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: 'Montserrat', sans-serif;
+  color: #8d8d8d;
+  font-size: 16px;
+}
+
+.result-pagination--number {
+  width: 32px;
+  height: 32px;
+  margin: 0 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 2px 2px 2px #bbb;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.result-pagination--number.selected {
+  color: white;
+  background-color: var(--color-purple);
+}
+
+/*====== Footer (Screen Two) ======*/
+footer.footer-two {
+  height: 100px;
+  display: none;
+}
+
+.result-pagination--two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+.vector {
+  width: 28px;
+  height: 28px;
+  box-shadow: 2px 2px 2px #bbb;
+  border-radius: 2px;
+  margin: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.result-pagination--numbers-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: 'Montserrat', sans-serif;
+  color: #8d8d8d;
+  font-size: 16px;
+}
+
+.result-pagination--number-two {
+  width: 32px;
+  height: 32px;
+  margin: 0 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 2px 2px 2px #bbb;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.result-pagination--number-two.selected {
+  color: white;
+  background-color: var(--color-purple);
+}
+
+@media (max-width: 425px) {
+  .filters {
+    flex-direction: column;
+    padding: 15px !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+
+  .filter-by,
+  .filter {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .filter-search {
+    justify-content: flex-end;
+    width: 316px;
+  }
+
+  main {
+    overflow: auto;
+  }
+
+  .results--screen-one {
+    margin-top: 120px;
+    left: 0;
+    right: 0;
+  }
+
+  .result-pagination--numbers {
+    display: none;
+  }
+
+  .country-information {
+    position: fixed;
+    top: 100px;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .country-flag {
+    width: 300px;
+    height: 174.71px;
+    margin-bottom: 10px;
+  }
+
+  .country-informations {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .country-informations span {
+    margin-bottom: 10px;
+  }
+
+  .results-title {
+    margin-top: 310px;
+    margin-bottom: -300px;
+    font-size: 14px;
+  }
+
+  .results--screen-two {
+    margin-top: 300px;
+  }
+}
